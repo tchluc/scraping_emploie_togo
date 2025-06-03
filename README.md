@@ -6,5 +6,5 @@ Scraper Python pour collecter automatiquement les offres d'emploi du site emploi
 
 1. Cloner le repository
 ```bash
-git clone <[votre-repo](https://github.com/tchluc/scraping_emploie_togo.git)>
+git clone <https://github.com/tchluc/scraping_emploie_togo.git>
 cd emploitogo-scraper
