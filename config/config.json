@@ -1,0 +1,42 @@
+{
+  "scraper": {
+    "base_url": "https://www.emploitogo.info",
+    "stage_url": "https://www.emploitogo.info/emploi-afrique/",
+    "delay_between_requests": 3,
+    "max_retries": 3,
+    "timeout": 30,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "output": {
+    "format": "json",
+    "file": "data/stage_data.json",
+    "backup_enabled": true
+  },
+  "selectors": {
+    "job_articles": ".post-item",
+    "job_title_link": ".entry-title a",
+    "pagination": ".pages-numbers .pagi-item[href]",
+    "next_page": ".pages-numbers .pagi-item-next[href]",
+    "title": "h1.entry-title, h1",
+    "publication_date": ".meta-date",
+    "category": ".meta-firstcat",
+    "content": ".entry-content, .post-content"
+  },
+  "extraction": {
+    "african_cities": [
+      "Lomé", "Kara", "Sokodé", "Kpalimé", "Atakpamé", "Tsévié", "Aného",
+      "Abidjan", "Douala", "Yaoundé", "Dakar", "Cotonou", "Ouagadougou",
+      "Bamako", "Accra", "Lagos", "Kinshasa", "Libreville", "Niamey"
+    ],
+    "contract_types": [
+      "CDI", "CDD", "Stage", "Freelance", "Consultant", "Temps partiel",
+      "Temps plein", "Bénévolat", "Interim", "Apprentissage"
+    ],
+    "sectors": [
+      "Informatique", "IT", "Finance", "Banque", "Assurance", "Santé",
+      "Education", "Commerce", "Marketing", "Logistique", "Transport",
+      "Agriculture", "Industrie", "Construction", "BTP", "Humanitaire",
+      "ONG", "Consulting", "Juridique", "RH", "Comptabilité", "Génie Civil"
+    ]
+  }
+}
